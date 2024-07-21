@@ -1,56 +1,62 @@
-const insultor = [{name: 'Jim Halpert', job: 'sales man', insult: 'lazy'}, 
-    {name: 'Dwight Schroot', job: 'sales man', insult: 'weak'},
+//An array of character from which one will be randomly selected to insult the user.
+const insultor = [{name: 'Jim Halpert', job: 'Sales man', insult: 'lazy'}, 
+    {name: 'Dwight Schroot', job: 'Sales man', insult: 'weak'},
     {name: 'Michael Scott', job: 'The boss', insult: 'not funny'},
-    {name: 'Kevin Malone', job: 'Accountant', insult: 'Dumb'},
-    {name: 'Pam Beasly', job: 'Receptionist', insult: 'Too nice'},
-    {name: 'Toby Flenderson', job: 'HR rep', insult: 'Rule breaker'},
-    {name: 'Kelly Kapoor', job: 'Customer services', insult: 'Too chatty'},
-    {name: 'Creed Braton', job: 'Qaulity control', insult: 'Creepy'},
+    {name: 'Kevin Malone', job: 'Accountant', insult: 'dumb'},
+    {name: 'Pam Beasly', job: 'Receptionist', insult: 'too nice'},
+    {name: 'Toby Flenderson', job: 'HR rep', insult: 'rebelious'},
+    {name: 'Kelly Kapoor', job: 'Customer services', insult: 'too chatty'},
+    {name: 'Creed Braton', job: 'Qaulity control', insult: 'creepy'},
     {name: 'Ryan Howard', job: 'Intern', insult: 'protentious'},
-    {name: 'Mose', job: 'Beet farmer', insult: 'Your have not beets'}
+    {name: 'Mose', job: 'Beet farmer', insult: 'your have not beets'}
 ]
 
-const theInsultor = name => {
+const theInsult = name => {
     
 //variables to be used in switch statement and final outputted message. 
-    let rndIn = Math.floor(Math.random() * 10); 
-    let insult = "fat"
+    let rndNum = Math.floor(Math.random() * 10); 
+    let character = insultor[rndNum][0]
+    let animal = "Sloth"
 
 //this switch statement will randomly assign the user an insult to be used later in the outputted message. 
-    switch (rndIn) {
+    switch (rndNum) {
         case 1: 
-        insult = "fat"; 
+        animal = "sloth"; 
         break; 
         case 2: 
-        insult = "ugly"; 
+        animal = "mouse"; 
         break; 
         case 3: 
-        insult = "lazy"
+        animal = "toby"
         break;
         case 4: 
-        insult = "stupid" 
+        insult = "pig" 
         break; 
         case 5: 
-        insult = "crazy"; 
+        insult = "quaker"; 
         break; 
         case 6: 
-        insult = "smelly"
+        insult = "cat"
         break; 
         case 7: 
-        insult = "angry"; 
+        insult = "bird"; 
         break; 
         case 8:
-        insult = "weird"; 
+        insult = "naked mole rat"; 
         break; 
         case 9: 
-        insult = "creepy"
+        insult = "turtle"
         break;
         case 10:
-        insult = "dumb"; 
+        insult = "horse"; 
         break; 
         default: 
-        insult = "fat"; 
+        insult = "sloth"; 
         break; 
     }
 
+    console.log(`Hi ${name}, I have been speaking to ${character} and we both think that your are ${insult} just like an ${animal}`); 
 }
+
+theInsult('Pete'); 
+
