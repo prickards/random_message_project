@@ -1,4 +1,4 @@
-#Random message project
+#Random message project##
 
 ##Description This was my first off platform project using Java script, git and github. This code will randomly select a character from the cast of the office and then insult you based on the selection. The user can input their name to make it personalised.
 
